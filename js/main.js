@@ -35,6 +35,22 @@ createApp({
             currentIndex: 0,
             
         }
+    },
+    methods: {
+        next() {
+            console.log('Ho cliccato su next');
+            this.currentIndex++;
+            if (this.currentIndex > this.slides.length - 1) {
+                this.currentIndex = 0;
+            }
+        },
+        prev() {
+            console.log('Ho cliccato su prev');
+            this.currentIndex--;
+            if (this.currentIndex < 0) {
+                this.currentIndex = this.slides.length - 1;
+            }
+        }
     }
 }).mount('#app');
 
