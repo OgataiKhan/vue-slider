@@ -14,26 +14,28 @@
 <body>
     <div id="app" v-cloak>
         <div class="container">
-            <div class="items">
-                <div v-for="(slide, index) in slides" class="item" :class="index === currentIndex ? 'active' : ''">
-                    <img :src="slide.image" :alt="`Image ${index + 1}`">
-                    <div class="textbox">
-                        <h2>{{ slides[index].title }}</h2>
-                        <p>{{ slides[index].description }}</p>
+            <div class="wrapper"  @mouseover="stopAutoplay" @mouseleave="autoplay">
+                <!-- Main image -->
+                <div class="items">
+                    <div v-for="(slide, index) in slides" class="item" :class="index === currentIndex ? 'active' : ''">
+                        <img :src="slide.image" :alt="`Image ${index + 1}`">
+                        <div class="textbox">
+                            <h2>{{ slides[index].title }}</h2>
+                            <p>{{ slides[index].description }}</p>
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="buttons">
-                    <button class="btn" id="start">&#9658;</button>
-                    <button class="btn" id="stop">&#9208;</button>
-                    <button class="btn" id="reverse">&#8634;</button>
-                </div> -->
-            </div>
-            <div class="thumbnails">
-                <div v-for="(slide, index) in slides" class="thumbnail" :class="index === currentIndex ? 'highlighted' : ''" @click="changeImage(index)">
-                    <img :src="slide.image" :alt="`Thumbnail ${index + 1}`">
+                <!-- /Main image -->
+                <!-- Thumbnails -->
+                <div class="thumbnails">
+                    <div v-for="(slide, index) in slides" class="thumbnail"
+                        :class="index === currentIndex ? 'highlighted' : ''" @click="changeImage(index)">
+                        <img :src="slide.image" :alt="`Thumbnail ${index + 1}`">
+                    </div>
+                    <div class="prev" @click="prev"></div>
+                    <div class="next" @click="next"></div>
                 </div>
-                <div class="prev" @click="prev"></div>
-                <div class="next" @click="next"></div>
+                <!-- /Thumbnails -->
             </div>
         </div>
     </div>

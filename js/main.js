@@ -33,7 +33,7 @@ createApp({
                 }
             ],
             currentIndex: 0,
-            
+            autoplayVariable: null,
         }
     },
     methods: {
@@ -53,7 +53,13 @@ createApp({
             this.currentIndex = index;
         },
         autoplay() {
-            setInterval(this.next, 3000);
+            if (this.autoplayVariable) {
+                clearInterval(this.autoplayVariable);
+            }
+            this.autoplayVariable = setInterval(this.next, 3000);
+        },
+        stopAutoplay() {
+            clearInterval(this.autoplayVariable);
         }
     },
     mounted() {

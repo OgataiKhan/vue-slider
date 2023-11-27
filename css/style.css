@@ -18,7 +18,6 @@ body img {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .items {
@@ -131,17 +130,6 @@ My css
     gap: 1px;
 }
 
-.btn {
-    font-size: 40px;
-    width: 60px;
-    height: 60px;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: rgba(255, 255, 255, 0.5);
-    border: none;
-    cursor: pointer;
-}
-
 .items .textbox {
     position: absolute;
     max-width: 68%;
@@ -160,4 +148,8 @@ My css
 
 [v-cloak] {
     display: none;
+}
+
+.wrapper {
+    display: flex;
 }
