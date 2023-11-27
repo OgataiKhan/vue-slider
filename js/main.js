@@ -5,7 +5,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            imageData: [
+            slides: [
                 {
                     image: 'img/01.jpg',
                     title: "Meet Bob",
@@ -32,6 +32,7 @@ createApp({
                     description: "If the console displays that bloody error message one more time he swears he's dropping everything and moving to the Bahamas."
                 }
             ],
+            currentIndex: 0,
             
         }
     }
