@@ -157,3 +157,7 @@ My css
 .items .textbox h2 {
     padding-bottom: 10px;
 }
+
+[v-cloak] {
+    display: none;
+}
