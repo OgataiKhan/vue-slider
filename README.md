@@ -16,7 +16,7 @@ In this project I am recreating the image carousel from the js-array-objects-car
 
 1. Create autoplay function and add it to mounted().
 
-# Bonus 3:
+## Bonus 3:
 
 1. Create autoplayVariable.
 2. Adjust autoplay function to clear any pre-existing intervals.
