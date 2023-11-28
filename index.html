@@ -14,7 +14,7 @@
 <body>
     <div id="app" v-cloak>
         <div class="container">
-            <div class="wrapper"  @mouseover="stopAutoplay" @mouseleave="autoplay">
+            <div class="wrapper"  @mouseenter="stopAutoplay" @mouseleave="autoplay">
                 <!-- Main image -->
                 <div class="items">
                     <div v-for="(slide, index) in slides" class="item" :class="index === currentIndex ? 'active' : ''">
